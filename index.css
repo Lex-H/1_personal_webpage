@@ -1,0 +1,113 @@
+/* slick的css放在index最底下，避免bug */
+
+/* Google Fonts */
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 100 to 400 */
+.fontPlaywriteNZ {
+  font-family: "Playwrite NZ", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+    position: fixed;
+    /* 用flex box排版 */
+    justify-content: space-between;
+
+    /* 阻止 position: fixed + display: flex 產生bug*/
+    top: 0;
+    left: 0;
+    right: 0;
+
+    /* 設定圖層在最上方，數字越大越上面 */
+    z-index: 100;
+
+    background-color: white;
+    border-bottom: 0.005em solid rgb(224, 224, 224);
+
+    height: 14vh;
+}
+
+.flex {
+    display: flex;
+}
+
+/* flexbox 垂直置中(交叉軸置中) */
+.centerVertically {
+    align-items: center;
+}
+
+/* flexbox 水平置中(主軸置中) */
+.centerHorizontally {
+    justify-content: center;
+}
+
+a {
+    margin: 3vh;
+    padding: 1vh;
+    color: black; /* 移除超連結顏色 */
+    text-decoration: none; /* 移除超連結底線 */
+    display: block;/* 讓 <a> 填滿 <li> */
+    font-size: 4vh;
+}
+
+a:hover {
+    background-color: rgb(115, 115, 115);
+    color: white;
+}
+
+#alexLogo {
+    margin: 1vh 2vh;
+    padding: 0 2vh;
+    font-size: 6vh;
+    border: 0.5vh solid #166aea;
+}
+
+#alexLogo:hover {
+    background-color: #166aea;
+    color: rgb(255, 204, 0);
+}
+
+header > a {
+    color: #166aea;
+    padding: 1.5vh;
+    font-size: 3vh;
+
+    /* 圓角邊框 */
+    border: 0.1vh solid #166aea;
+    border-radius: 5vh;
+}
+
+header >a:hover {
+    background-color: #166aea;
+    color: white;
+}
+
+nav > ul {
+    list-style: none; /* 移除項目符號 */
+    margin: 0;
+    padding: 0;
+}
+
+.topForHeader {
+    height: 14vh;
+}
+
+section {
+    height: 180vh;
+}
+
+.title {
+    justify-content: center;
+    font-size: 2vw;
+}
+
+#aboutAlex > .flex > div {
+    margin: 0 5vw;
+}
+
+.articleBorder {
+    padding: 1em;
+    border: 0.1vh solid #166aea;
+}
