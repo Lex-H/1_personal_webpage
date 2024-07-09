@@ -41,6 +41,7 @@ header {
 /* flexbox 水平置中(主軸置中) */
 .centerHorizontally {
     justify-content: center;
+    flex-flow: wrap; /* 讓row變多行 */
 }
 
 a {
@@ -110,4 +111,5 @@ section {
 .articleBorder {
     padding: 1em;
     border: 0.1vh solid #166aea;
+    width: 33vw;
 }

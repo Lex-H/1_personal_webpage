@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-auto-rows: 25vw;
+
+        border: solid rgb(255, 0, 0);
+        }
+        div > div {
+            border: solid rgb(0, 115, 255);
+        }
+        #box1 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        #box2 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        #box3 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        #box4 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="box1">
+            One
+        </div>
+        <div id="box2">
+            Two<br>
+            前端工程師 & 攝影師：雙重身份的我
+                嘿，你好！我是一位專業的前端工程師和攝影師。我熱愛學習新事物，就像我熱愛咖啡和巧克力一樣。我堅信，只要有熱情和毅力，任何人都可以成為他們想成為的人，就像超人一樣！
+                前端工程師：我是小小魔法師
+                我是一位自學成才的前端工程師，就像一個網路版的哈利波特。我在網路這所魔法學校找到了許多資源，並且利用這些資源來學習前端開發
+                前端工程師 & 攝影師：雙重身份的我
+                嘿，你好！我是一位專業的前端工程師和攝影師。我熱愛學習新事物，就像我熱愛咖啡和巧克力一樣。我堅信，只要有熱情和毅力，任何人都可以成為他們想成為的人，就像超人一樣！
+                前端工程師：我是小小魔法師
+                我是一位自學成才的前端工程師，就像一個網路版的哈利波特。我在網路這所魔法學校找到了許多資源，並且利用這些資源來學習前端開發
+        </div>
+        <div id="box3">Three</div>
+        <div id="box4">Four</div>
+      </div>
+</body>
+</html>
