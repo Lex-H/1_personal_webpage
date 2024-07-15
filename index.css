@@ -1,4 +1,21 @@
+/* 行動優先，沒有@media的代表是手機板，額外設定電腦及平板版本 */
 /* slick的css放在index最底下，避免bug */
+
+/* CSS HEX */
+#colorsForThisCss {
+    /* From https://coolors.co/b0f2b4-baf2e9-bad7f2-f2bac9-f2e2ba */
+    --celadon: #b0f2b4ff;
+    --celeste: #baf2e9ff;
+    --columbia-blue: #bad7f2ff;
+    --orchid-pink: #f2bac9ff;
+    --dutch-white: #f2e2baff;
+
+    /* 參考 https://zh.wix.com/start/blog */
+    color: #166aea;
+    /* 自訂 */
+}
+
+
 
 /* Google Fonts */
 /* <uniquifier>: Use a unique and descriptive class name */
@@ -10,7 +27,29 @@
   font-style: normal;
 }
 
+
 header {
+    position: fixed;
+    /* 用flex box排版 */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    
+
+    /* 阻止 position: fixed + display: flex 產生bug*/
+    top: 0;
+    left: 0;
+
+    /* 設定圖層在最上方，數字越大越上面 */
+    z-index: 100;
+
+    background-color: rgb(253, 145, 145);/* 記得刪除 */
+
+    width: 100vw;
+    height: 14vh;
+    
+    }
+@media screen and (min-width:576px) {
+   header {
     position: fixed;
     /* 用flex box排版 */
     justify-content: space-between;
@@ -18,7 +57,6 @@ header {
     /* 阻止 position: fixed + display: flex 產生bug*/
     top: 0;
     left: 0;
-    right: 0;
 
     /* 設定圖層在最上方，數字越大越上面 */
     z-index: 100;
@@ -26,7 +64,9 @@ header {
     background-color: white;
     border-bottom: 0.005em solid rgb(224, 224, 224);
 
+    width: 100vw;
     height: 14vh;
+    } 
 }
 
 .flex {
@@ -44,7 +84,7 @@ header {
     flex-flow: wrap; /* 讓row變多行 */
 }
 
-a {
+#navUl a {
     margin: 3vh;
     padding: 1vh;
     color: black; /* 移除超連結顏色 */
@@ -53,24 +93,34 @@ a {
     font-size: 4vh;
 }
 
-a:hover {
+#navUl a:hover {
     background-color: rgb(115, 115, 115);
     color: white;
 }
 
-#alexLogo {
-    margin: 1vh 2vh;
-    padding: 0 2vh;
-    font-size: 6vh;
-    border: 0.5vh solid #166aea;
-}
+#alexLogoBox {
+    width: 50%;
+    height: 50%;
+    border: 0.75vw solid #166aea;
+    background-color: white;
 
-#alexLogo:hover {
+    text-align: center;
+}
+#alexLogoBox:active {
     background-color: #166aea;
-    color: rgb(255, 204, 0);
+}
+#alexLogoText {
+    font-size: 10vw;
+    font-weight: 900;
+    text-decoration: none;
+    color: #166aea;
+    padding: 0;
+}
+#alexLogoText:active {
+    color: white;
 }
 
-header > a {
+#makeWebsites {
     color: #166aea;
     padding: 1.5vh;
     font-size: 3vh;
@@ -84,32 +134,72 @@ header >a:hover {
     background-color: #166aea;
     color: white;
 }
+@media screen and (min-width:576px) {
+    
+}
+
+nav {
+    position: absolute;
+    right: 1vw;
+}
 
 nav > ul {
+    display: none;
+}
+@media screen and (min-width:576px) {
+    nav > ul {
+    display: flex;
+    align-items: center;
     list-style: none; /* 移除項目符號 */
     margin: 0;
     padding: 0;
+    }
 }
 
-.topForHeader {
-    height: 14vh;
+#makeWebsites {
+    display: none;
+}
+@media screen and (min-width:576px) {
+	#makeWebsites {
+        display: block;
+    }
+}
+
+@media screen and (min-width:576px) {
+    .topForHeader {
+        height: 14vh;
+    }
 }
 
 section {
+    position: relative;
+    top: 14vh;
+}
+@media screen and (min-width:576px) {
+    section {
     height: 180vh;
+    }
 }
 
-.title {
-    justify-content: center;
-    font-size: 2vw;
+@media screen and (min-width:576px) {
+    .title {
+        justify-content: center;
+        font-size: 2vw;
+    }
 }
 
-#aboutAlex > .flex > div {
-    margin: 0 5vw;
+
+
+@media screen and (min-width:576px) {
+    #aboutAlex > .flex > div {
+        margin: 0 5vw;
+    }
 }
 
-.articleBorder {
-    padding: 1em;
-    border: 0.1vh solid #166aea;
-    width: 33vw;
+@media screen and (min-width:576px) {
+    .articleBorder {
+        padding: 1em;
+        border: 0.1vh solid #166aea;
+        width: 33vw;
+    }
 }

@@ -1,0 +1,26 @@
+    #alexLogo {
+        margin: 1vh 2vh;
+        padding: 0 2vh;
+        font-size: 6vh;
+        border: 0.5vh solid #166aea;
+    }
+    
+    #alexLogo:hover {
+        background-color: #166aea;
+        color: rgb(255, 204, 0);
+    }
+    
+    header > a {
+        color: #166aea;
+        padding: 1.5vh;
+        font-size: 3vh;
+    
+        /* 圓角邊框 */
+        border: 0.1vh solid #166aea;
+        border-radius: 5vh;
+    }
+    
+    header >a:hover {
+        background-color: #166aea;
+        color: white;
+    }

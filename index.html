@@ -2,7 +2,8 @@
 <html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 設定RWD，user-scalable=no禁用縮放網頁，但是這個功能好像在某些瀏覽器不起作用 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable=no>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +12,7 @@
 
     <!-- slick插件 -->
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    // Add the new slick-theme.css if you want the default styling
+    <!-- Add the new slick-theme.css if you want the default styling -->
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
     <title>Alex作品集</title>
@@ -20,24 +21,23 @@
 </head>
 <body>
     <header class="flex">
-        <div>
-            <a id="alexLogo" class="fontPlaywriteNZ" href="#aboutAlex">Alex</a>
+        <div id="alexLogoBox">
+            <a id="alexLogoText" class="fontPlaywriteNZ" href="#aboutAlex">Alex</a>
         </div>
         <nav>
-            <ul class="flex centerVertically">
+            <ul id="navUl">
                 <li><a href="#aboutAlex">關於Alex</a></li>
                 <li><a href="#frontEndPortfolio">前端作品集</a></li>
                 <li><a href="#photographyPortfolio">攝影作品集</a></li>
                 <li><a href="#contactMethod">聯絡方式</a></li>
             </ul>
         </nav>
-        <a href="#makeWebsites">我要做網站！</a>
+        <a id="makeWebsites" href="#makeWebsites">我要做網站！</a>
     </header>
 
     
 
     <section id="aboutAlex">
-        <div class="topForHeader"></div>
         <!-- 使用flex box排版 -->
         <div class="flex title">
             <h1>關於Alex</h1>
