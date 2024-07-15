@@ -98,25 +98,21 @@ header {
     color: white;
 }
 
-#alexLogoBox {
+#alexLogo {
     width: 50%;
     height: 50%;
     border: 0.75vw solid #166aea;
     background-color: white;
 
     text-align: center;
-}
-#alexLogoBox:active {
-    background-color: #166aea;
-}
-#alexLogoText {
+
     font-size: 10vw;
     font-weight: 900;
     text-decoration: none;
     color: #166aea;
-    padding: 0;
 }
-#alexLogoText:active {
+#alexLogo:active {
+    background-color: #166aea;
     color: white;
 }
 
