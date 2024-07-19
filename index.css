@@ -99,12 +99,13 @@ header {
 }
 
 #alexLogo {
-    width: 50%;
+    width: 35%;
     height: 50%;
     border: 0.75vw solid #166aea;
     background-color: white;
 
     text-align: center;
+    padding: 1vw;
 
     font-size: 10vw;
     font-weight: 900;
