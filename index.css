@@ -103,14 +103,16 @@ header {
     height: 50%;
     border: 0.75vw solid #166aea;
     background-color: white;
-
-    text-align: center;
     padding: 1vw;
 
     font-size: 10vw;
     font-weight: 900;
     text-decoration: none;
     color: #166aea;
+
+    /* 用flex box排版 */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
 }
 #alexLogo:active {
     background-color: #166aea;
