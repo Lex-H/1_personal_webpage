@@ -17,7 +17,6 @@
 
     <title>Alex作品集</title>
     <link href="index.css" rel="stylesheet" type="text/css">
-    <script src="index.js"></script>
 </head>
 <body>
     <header class="flex">
@@ -26,7 +25,15 @@
                 Alex
             </div>
         </a>
-        <nav>
+        <nav id="navTest">
+            <!-- 測試用的，正式的在底下 -->
+            <div id="menuIcon" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </nav>
+        <nav id="nav">
             <ul id="navUl">
                 <li><a href="#aboutAlex">關於Alex</a></li>
                 <li><a href="#frontEndPortfolio">前端作品集</a></li>

@@ -31,7 +31,6 @@
 header {
     position: fixed;
     /* 用flex box排版 */
-    justify-content: center; /* 水平置中 */
     align-items: center; /* 垂直置中 */
     
 
@@ -42,12 +41,12 @@ header {
     /* 設定圖層在最上方，數字越大越上面 */
     z-index: 100;
 
-    background-color: rgb(253, 145, 145);/* 記得刪除 */
-
     width: 100vw;
     height: 14vh;
-    
-    }
+
+    background-color: white;
+    border-bottom: 0.005em solid rgb(224, 224, 224);    
+}
 @media screen and (min-width:576px) {
    header {
     position: fixed;
@@ -84,28 +83,18 @@ header {
     flex-flow: wrap; /* 讓row變多行 */
 }
 
-#navUl a {
-    margin: 3vh;
-    padding: 1vh;
-    color: black; /* 移除超連結顏色 */
-    text-decoration: none; /* 移除超連結底線 */
-    display: block;/* 讓 <a> 填滿 <li> */
-    font-size: 4vh;
-}
 
-#navUl a:hover {
-    background-color: rgb(115, 115, 115);
-    color: white;
-}
 
 #alexLogo {
-    width: 35%;
+    position: absolute;
+    left: 5%;
+    width: 20%;
     height: 50%;
     border: 0.75vw solid #166aea;
     background-color: white;
-    padding: 1vw;
+    padding: 1.5vw;
 
-    font-size: 10vw;
+    font-size: 8vw;
     font-weight: 900;
     text-decoration: none;
     color: #166aea;
@@ -137,13 +126,41 @@ header >a:hover {
     
 }
 
-nav {
+#navTest {
+    position: absolute;
+    right: 5%;
+    width: 10%;
+}
+/* ---------------menuIcon的css開始--------------- */
+#menuIcon {
+  display: inline-block;
+  cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+/* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+/* ---------------menuIcon的css結束--------------- */
+
+
+#nav {
+    /* 暫時先隱藏起來 */
+    display: none;
     position: absolute;
     right: 1vw;
-}
-
-nav > ul {
-    display: none;
 }
 @media screen and (min-width:576px) {
     nav > ul {
@@ -153,6 +170,20 @@ nav > ul {
     margin: 0;
     padding: 0;
     }
+}
+
+#navUl a {
+    margin: 3vh;
+    padding: 1vh;
+    color: black; /* 移除超連結顏色 */
+    text-decoration: none; /* 移除超連結底線 */
+    display: block;/* 讓 <a> 填滿 <li> */
+    font-size: 4vh;
+}
+
+#navUl a:hover {
+    background-color: rgb(115, 115, 115);
+    color: white;
 }
 
 #makeWebsites {
